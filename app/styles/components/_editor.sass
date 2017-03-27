@@ -1,0 +1,27 @@
+.editor
+  @media (min-width: 420px) and (orientation: landscape)
+    height: 100%
+    width: 50%
+
+  &__field
+    background: rgba(255, 255, 255, 0.9)
+    border: 0
+    border-bottom: 3px solid rgba(0, 0, 0, 0.1)
+    color: rgba(0, 0, 0, 0.75)
+    font-family: 'Source Code Pro', Menlo, Inconsolata, monospace
+    font-size: 0.875rem
+    font-weight: 300
+    height: 30%
+    line-height: 1.5
+    outline: none
+    padding: 0.5rem
+    resize: none
+    width: 100%
+
+    @media (min-width: 420px) and (orientation: landscape)
+      border: 0
+      border-right: 3px solid rgba(0, 0, 0, 0.1)
+      height: 100%
+
+    &:focus
+      box-shadow: 0 0 0 1px #03a9f4 inset
