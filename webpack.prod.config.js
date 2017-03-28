@@ -16,7 +16,7 @@ const ExtractTextPluginConfig = new ExtractTextPlugin({
 module.exports = {
   entry: './app/app.jsx',
   output: {
-    path: path.resolve('public'),
+    path: path.resolve('dist'),
     filename: 'bundle.js',
   },
   resolve: {
@@ -63,9 +63,15 @@ module.exports = {
     HtmlWebpackPluginConfig,
     ExtractTextPluginConfig,
     new webpack.optimize.UglifyJsPlugin({
+      comments: false,
       compress: {
-        warnings: true,
+        conditionals: true,
+        dead_code: true,
+        drop_debugger: true,
         screw_ie8: true,
+        unsafe: true,
+        unsafe_comps: true,
+        warnings: false,
       },
       output: {
         comments: false,

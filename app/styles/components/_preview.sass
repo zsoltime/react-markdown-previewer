@@ -1,14 +1,47 @@
 .preview
-  height: auto
+  font-weight: 300
+  height: calc(70vh - 2rem)
+  overflow: auto
   padding: 0.5rem
   width: 100%
 
+  h1, h2, h3
+    font-size: 1.875rem
+    font-weight: 300
+    margin: 0 0 1rem
+
+  h2
+    font-size: 1.5rem
+
+  h3
+    font-size: 1.25rem
+
+  p
+    margin: 0 0 1rem
+
+  code
+    background-color: rgba(black, .05)
+    border-radius: 2px
+    font-family: $font-family-mono
+    font-size: .875rem
+    padding: .2rem 0
+
+    &::before, &::after
+      content: '\00a0'
+      letter-spacing: -0.1rem
+
+  blockquote
+    border-left: 4px solid rgba(black, .1)
+    color: transparentize($text-color, .1)
+    margin: 0
+    padding: 0 1rem
+
   a
-    color: #ffc107
-    transition: .3s color ease
+    color: $link-color
+    transition: .3s color ease-out
 
   a:hover
-    color: #ffd54f
+    color: $link-color-active
 
   @media (min-width: 420px) and (orientation: landscape)
     height: 100%

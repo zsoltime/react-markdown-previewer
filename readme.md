@@ -1,4 +1,4 @@
-# WIP React Markdown Previewer
+# React Markdown Previewer
 
 This is my markdown previewer for Free Code Camp's [first React challenge](https://www.freecodecamp.com/challenges/build-a-markdown-previewer).
 

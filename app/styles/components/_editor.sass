@@ -1,17 +1,24 @@
 .editor
+  align-items: center
+  background-color: rgba(white, .9)
+  border-bottom: 3px solid rgba(black, .1)
+  display: flex
+  flex-direction: column
+
   @media (min-width: 420px) and (orientation: landscape)
+    border-bottom: 0
+    border-right: 3px solid rgba(black, .1)
     height: 100%
     width: 50%
 
   &__field
-    background: rgba(255, 255, 255, 0.9)
+    background-color: transparent
     border: 0
-    border-bottom: 3px solid rgba(0, 0, 0, 0.1)
-    color: rgba(0, 0, 0, 0.75)
-    font-family: 'Source Code Pro', Menlo, Inconsolata, monospace
+    color: rgba(black, .75)
+    font-family: $font-family-mono
     font-size: 0.875rem
     font-weight: 300
-    height: 30%
+    height: 30vh
     line-height: 1.5
     outline: none
     padding: 0.5rem
@@ -20,8 +27,7 @@
 
     @media (min-width: 420px) and (orientation: landscape)
       border: 0
-      border-right: 3px solid rgba(0, 0, 0, 0.1)
-      height: 100%
+      height: calc(100% - 2rem)
 
     &:focus
-      box-shadow: 0 0 0 1px #03a9f4 inset
+      box-shadow: 0 0 2px #03a9f4 inset

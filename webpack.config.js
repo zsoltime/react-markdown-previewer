@@ -15,7 +15,7 @@ const ExtractSass = new ExtractTextPlugin({
 module.exports = {
   entry: './app/app.jsx',
   output: {
-    path: path.resolve('public'),
+    path: path.resolve('dist'),
     filename: 'bundle.js',
   },
   resolve: {
@@ -65,11 +65,10 @@ module.exports = {
     ExtractSass,
   ],
   devServer: {
-    contentBase: path.join(__dirname, 'public'),
+    contentBase: path.join(__dirname, 'dist'),
     compress: true,
     overlay: true,
     port: 8080,
-    // publicPath: 'public',
     watchContentBase: true,
   },
   externals: {

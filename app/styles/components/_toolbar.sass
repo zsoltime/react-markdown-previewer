@@ -1,16 +1,22 @@
 .toolbar
-  background-color: $background-color
-  border-bottom: 1px solid rgba(black, .1)
+  border-bottom: 1px solid rgba(black, .05)
   display: flex
   justify-content: space-around
+  height: 2rem
+  width: 20rem
 
   &__item
     background-color: transparent
     border: 0
     color: rgba(black, .5)
     cursor: pointer
+    font-size: 1rem
     height: 2rem
+    transition: transform .2s cubic-bezier(.35, .3, .8, 1.65)
     width: 2rem
+
+    &:hover
+      transform: scale(1.25)
 
     path, rect
       fill: currentColor
