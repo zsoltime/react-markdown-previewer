@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import marked from 'marked';
 
 import Preview from 'Preview';
-import Toolbar from 'Toolbar';
+import Editor from 'Editor';
 
 class Viewer extends Component {
   constructor(props) {
@@ -14,6 +14,7 @@ class Viewer extends Component {
       sanitize: true,
       smartypants: true,
     });
+    this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
   handleChange(event) {
@@ -49,16 +50,12 @@ class Viewer extends Component {
     const markdown = marked(this.state.content);
     return (
       <div className="app">
-        <div className="editor">
-          <Toolbar onClickEvent={this.handleClick} />
-          <textarea
-            className="editor__field"
-            ref={(node) => { this.field = node; }}
-            rows="6"
-            onChange={event => this.handleChange(event)}
-            defaultValue={this.state.content}
-          />
-        </div>
+        <Editor
+          content={this.state.content}
+          handleChange={this.handleChange}
+          handleClick={this.handleClick}
+          fieldRef={(node) => { this.field = node; }}
+        />
         <Preview content={markdown} />
       </div>
     );
