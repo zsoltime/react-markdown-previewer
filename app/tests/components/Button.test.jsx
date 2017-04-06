@@ -11,9 +11,8 @@ describe('<Button />', () => {
 
   describe('render', () => {
     it('should render a button', () => {
-      const children = 'B';
       const button = render(
-        <Button id="x" onClickEvent={f => f}>{children}</Button>
+        <Button id="x" onClickEvent={f => f}>test</Button>
       );
       const actualButton = button.find('button');
 
@@ -21,7 +20,7 @@ describe('<Button />', () => {
     });
 
     it('should render the child element', () => {
-      const children = 'B';
+      const children = 'test';
       const button = render(
         <Button id="x" onClickEvent={f => f}>{children}</Button>
       );
@@ -34,14 +33,12 @@ describe('<Button />', () => {
   describe('onClickEvent', () => {
     it('should call a callback function when clicked', () => {
       const spy = expect.createSpy();
-      const children = 'B';
       const button = shallow(
-        <Button id="x" onClickEvent={spy}>{children}</Button>
+        <Button id="x" onClickEvent={spy}>test</Button>
       );
       const actualButton = button.find('button');
 
       actualButton.simulate('click');
-
       expect(spy).toHaveBeenCalled();
     });
   });

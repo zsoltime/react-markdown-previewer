@@ -37,8 +37,8 @@ describe('<Toolbar />', () => {
         <Toolbar onClickEvent={spy} />
       );
       const button = toolbar.find('#code');
-      button.simulate('click');
 
+      button.simulate('click');
       expect(spy).toHaveBeenCalledWith('`', '`');
     });
   });
