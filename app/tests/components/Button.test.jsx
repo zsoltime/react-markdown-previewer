@@ -1,6 +1,6 @@
 import React from 'react';
 import expect from 'expect';
-import { render, shallow } from 'enzyme';
+import { shallow } from 'enzyme';
 
 import Button from 'Button';
 
@@ -11,7 +11,7 @@ describe('<Button />', () => {
 
   describe('render', () => {
     it('should render a button', () => {
-      const button = render(
+      const button = shallow(
         <Button id="x" onClickEvent={f => f}>test</Button>
       );
       const actualButton = button.find('button');
@@ -19,9 +19,9 @@ describe('<Button />', () => {
       expect(actualButton.length).toBe(1);
     });
 
-    it('should render the child element', () => {
+    it('should render the child element inside the button', () => {
       const children = 'test';
-      const button = render(
+      const button = shallow(
         <Button id="x" onClickEvent={f => f}>{children}</Button>
       );
       const actualButton = button.find('button');

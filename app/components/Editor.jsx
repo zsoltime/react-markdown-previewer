@@ -3,14 +3,15 @@ import Toolbar from 'Toolbar';
 
 class Editor extends Component {
   render() {
+    const { content, fieldRef, handleClick, handleChange } = this.props;
     return (
       <div className="editor">
-        <Toolbar onClickEvent={this.props.handleClick} />
+        <Toolbar onClickEvent={handleClick} />
         <textarea
           className="editor__field"
-          ref={this.props.fieldRef}
-          onChange={event => this.props.handleChange(event)}
-          defaultValue={this.props.content}
+          ref={fieldRef}
+          onChange={event => handleChange(event)}
+          defaultValue={content}
         />
       </div>
     );

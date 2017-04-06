@@ -60,7 +60,6 @@ const Toolbar = ({ onClickEvent }) => {
         <Button
           key={button.id}
           id={button.id}
-          type={button.id}
           onClickEvent={() => onClickEvent(button.pre, button.post)}
         >{button.btn}</Button>
       ))}
