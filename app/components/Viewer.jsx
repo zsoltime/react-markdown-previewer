@@ -5,8 +5,8 @@ import Preview from 'Preview';
 import Editor from 'Editor';
 
 class Viewer extends Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       content: "# Markdown Previewer\n\nLook mum, I'm using **markdown** with React_JS_, woohoo.\n\nSartorial sustainable plaid tote bag, disrupt godard hella. Knausgaard you probably haven't heard of them selvage ethical. Fap seitan pok pok, flexitarian humblebrag hashtag austin jean shorts cold-pressed hoodie banh mi church-key tilde. \n\nNormcore scenester freegan four dollar toast, franzen chambray PBR&B affogato helvetica. Photo booth swag man braid, tumblr glossier jianbing humblebrag squid ramps hexagon. \n\nCray austin drinking vinegar hot chicken, tumblr try-hard quinoa vaporware fanny pack trust fund. Williamsburg twee next level la croix, biodiesel hot chicken Pinterest tote bag hella tilde.\n",
     };
@@ -47,7 +47,7 @@ class Viewer extends Component {
     });
   }
   render() {
-    const markdown = marked(this.state.content);
+    const markdown = marked(this.state.content || '');
     return (
       <div className="app">
         <Editor
