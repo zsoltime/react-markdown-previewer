@@ -1,5 +1,7 @@
 /* eslint-disable max-len */
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import Button from 'Button';
 
 const Toolbar = ({ onClickEvent }) => {
