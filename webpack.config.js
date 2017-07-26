@@ -13,7 +13,10 @@ const ExtractSass = new ExtractTextPlugin({
 });
 
 module.exports = {
-  entry: './app/app.jsx',
+  entry: [
+    'react-hot-loader/patch',
+    './app/app.jsx',
+  ],
   output: {
     path: path.resolve('dist'),
     filename: 'bundle.js',

@@ -2,10 +2,11 @@
   "presets": [
     "react",
     ["env", {
-      "modules": false
+      "modules": false,
     }],
   ],
   "plugins": [
-    "babel-plugin-transform-object-rest-spread"
+    "babel-plugin-transform-object-rest-spread",
+    "react-hot-loader/babel",
   ],
 }
