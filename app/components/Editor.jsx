@@ -12,7 +12,7 @@ class Editor extends Component {
         <textarea
           className="editor__field"
           ref={fieldRef}
-          onChange={event => handleChange(event)}
+          onChange={handleChange}
           defaultValue={content}
         />
       </div>

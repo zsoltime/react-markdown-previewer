@@ -41,6 +41,8 @@ class Viewer extends Component {
 
     const updated = content.slice(0, left) + pre + content.slice(left);
     this.field.value = updated.slice(0, right) + post + updated.slice(right);
+    this.field.setSelectionRange(start + pre.length, end + pre.length);
+    this.field.focus();
 
     this.setState({
       content: this.field.value,
