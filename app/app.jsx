@@ -17,5 +17,5 @@ const renderComponent = (Component) => {
 renderComponent(Viewer);
 
 if (module.hot) {
-  module.hot.accept(Viewer, () => { render(Viewer); });
+  module.hot.accept(Viewer, () => { renderComponent(Viewer); });
 }
